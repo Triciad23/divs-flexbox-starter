@@ -101,36 +101,72 @@ html {
 }
 
 body {
+  color: #fff;
+  display: flex;
   font-family: "Source Sans Pro", sans-serif;
-  padding: 2em;
+  padding: 0em 2em;
   font-size: 1.25em;
   height: 100%;
+  justify-content: center;
+}
+header,
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+h1 {
+  font-size: 3em;
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+}
+p {
+  font-size: 1.35em;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
   justify-content: space-between;
+  flex-flow: column nowrap;
 }
 
-.div-1,
-.div-2,
-.div-3 {
+.flex-items {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+  border-top: #fff solid 1px;
   color: #fff;
   display: flex;
-  line-height: 1.25em;
+  line-height: 1.5em;
   font-size: 1em;
   background-color: darkslategray;
-  height: 300px;
-  align-items: flex-start;
+  height: auto;
+  align-items: center;
   justify-content: center;
-  padding: 10px;
-  width: 33.3%;
+  padding: 20px;
 }
-.div-2 {
-  border-left: #999 solid 1px;
-  border-right: #999 solid 1px;
+
+.social {
+  border-top: #fff solid 1px;
+  padding: 25px 25px 0px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@media (min-width: 1200px) {
+  .flex-items {
+    width: 33.3%;
+  }
+  .wrapper {
+    flex-flow: row nowrap;
+  }
+  #div-2 {
+    border-left: #999 solid 0.5px;
+    border-right: #999 solid 0.5px;
+  }
 }
 /* ==========================================================================
    Helper classes
